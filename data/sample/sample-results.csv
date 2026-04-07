@@ -1,0 +1,5 @@
+Name,Day,Type,Bounced,Clicked,Completed,Pending,Scheduled,Sent emails,Total,Viewed
+Email 1,1,Email,1,2,35,0,0,35,35,14
+Email 2,4,Email,,2,34,0,0,34,34,9
+Email 3,9,Email,,,,,,,34,
+Email 4,17,Email,,,,,,,,

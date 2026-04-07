@@ -1,0 +1,27 @@
+# Local Claude Code config
+.claude/commands/
+.claude/settings.local.json
+
+# Proprietary knowledge base
+docs/knowledge/
+
+# Internal planning docs
+docs/IMPLEMENTATION_PLAN.md
+docs/spiced.md
+GTM_LAB_BUILD_PLAN.md
+
+# User data (generated at runtime)
+data/prospects/*
+data/experiments/*
+data/sequences/*
+data/exports/*
+!data/prospects/.gitkeep
+!data/experiments/.gitkeep
+!data/sequences/.gitkeep
+
+# Keep sample data and template
+!data/context/product.json
+!data/sample/
+
+# OS files
+.DS_Store
