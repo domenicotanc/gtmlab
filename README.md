@@ -84,7 +84,7 @@ That's it. No `npm install`, no environment variables, no build step.
 
 ## SPICED Framework
 
-The `/discover` skill implements the Winning by Design SPICED methodology:
+The `/discover` skill implements the SPICED methodology:
 
 - **S**ituation — Background facts, qualify fit
 - **P**ain — Challenges and frustrations (emotional + rational)
