@@ -1,0 +1,16 @@
+{
+  "variant": "A",
+  "angle": "pain-focused",
+  "prospect": {
+    "company_name": "Notion",
+    "contact_name": "Alex Kim",
+    "contact_email": "alex@notion.so"
+  },
+  "emails": [
+    {"number": 1, "type": "opener", "subject": "Trust friction", "body": "Hi Alex, as Notion scales into enterprise, security questionnaires and trust verification become a bottleneck. Most product-led companies underestimate how much this slows deal cycles."},
+    {"number": 2, "type": "value", "subject": "The enterprise blocker", "body": "Alex, enterprise buyers want proof of security posture before they sign. If trust verification is manual and slow, it's adding weeks to every deal. That's revenue sitting in the pipeline."},
+    {"number": 3, "type": "social-proof", "subject": "How a SaaS company solved it", "body": "A productivity SaaS similar to Notion automated their trust verification process. Enterprise deal cycles shortened by 3 weeks on average. Their security team got 15 hours back per month."},
+    {"number": 4, "type": "followup", "subject": "Relevant data", "body": "Alex, compiled data on how product-led SaaS companies handle enterprise trust requirements. Might be useful as Notion pushes upmarket. Interested?"},
+    {"number": 5, "type": "breakup", "subject": "Final thought", "body": "Alex, totally understand if this isn't a priority right now. If enterprise trust verification ever becomes a focus, happy to share what we're seeing work. Best of luck with Notion's growth."}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "variant": "B",
+  "angle": "value-focused",
+  "prospect": {
+    "company_name": "Notion",
+    "contact_name": "Alex Kim",
+    "contact_email": "alex@notion.so"
+  },
+  "emails": [
+    {"number": 1, "type": "opener", "subject": "Enterprise playbook", "body": "Hi Alex, the SaaS companies winning enterprise deals fastest all share one pattern: they make trust verification a self-serve experience, not a security team bottleneck."},
+    {"number": 2, "type": "value", "subject": "PLG meets enterprise", "body": "Alex, product-led companies moving upmarket face a unique challenge: enterprise buyers need security proof, but adding friction kills the PLG motion. The best teams automate this entirely."},
+    {"number": 3, "type": "social-proof", "subject": "The PLG-enterprise bridge", "body": "A SaaS productivity tool like Notion automated trust verification and cut their enterprise sales cycle by 3 weeks. Their PLG motion stayed frictionless while enterprise deals closed faster."},
+    {"number": 4, "type": "followup", "subject": "Quick read", "body": "Alex, put together a short piece on how PLG companies handle the enterprise trust gap without adding friction. Relevant to where Notion is heading. Worth 3 minutes?"},
+    {"number": 5, "type": "breakup", "subject": "Last one", "body": "Alex, I'll leave it here. If the PLG-to-enterprise trust challenge comes up in your planning, I'd enjoy the conversation. Wishing Notion continued success."}
+  ]
+}

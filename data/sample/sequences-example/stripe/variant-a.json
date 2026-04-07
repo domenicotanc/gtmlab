@@ -1,0 +1,16 @@
+{
+  "variant": "A",
+  "angle": "pain-focused",
+  "prospect": {
+    "company_name": "Stripe",
+    "contact_name": "Sarah Chen",
+    "contact_email": "sarah@stripe.com"
+  },
+  "emails": [
+    {"number": 1, "type": "opener", "subject": "Compliance gap", "body": "Hi Sarah, scaling payments globally means scaling compliance risk. Most fintech teams we talk to are drowning in manual identity checks. Is that on your radar?"},
+    {"number": 2, "type": "value", "subject": "The hidden cost", "body": "Sarah, the average compliance team spends 40% of their time on manual reviews that could be automated. That's not just slow — it's a conversion killer for your merchants."},
+    {"number": 3, "type": "social-proof", "subject": "How a fintech fixed it", "body": "A payments company similar to Stripe cut their onboarding friction by 60% after automating identity verification. Their merchant activation rate jumped 23% in one quarter."},
+    {"number": 4, "type": "followup", "subject": "Quick resource", "body": "Sarah, put together a short guide on identity verification patterns we're seeing in fintech. Thought it might be useful given Stripe's expansion. Worth a look?"},
+    {"number": 5, "type": "breakup", "subject": "Last note", "body": "Sarah, I'll leave it here. If compliance automation ever becomes a priority, happy to share what's working for other payment platforms. Door's always open."}
+  ]
+}

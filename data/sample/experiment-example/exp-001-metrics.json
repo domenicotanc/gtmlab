@@ -1,0 +1,130 @@
+{
+  "variants": {
+    "A": {
+      "totals": {
+        "sent": 136,
+        "opened": 33,
+        "clicked": 4,
+        "replied": 0,
+        "meeting_booked": 0,
+        "bounced": 1,
+        "unsubscribed": 0
+      },
+      "rates": {
+        "open_rate": 0.2426,
+        "reply_rate": 0.0,
+        "click_rate": 0.0294,
+        "meeting_rate": 0.0,
+        "bounce_rate": 0.0074
+      }
+    },
+    "B": {
+      "totals": {
+        "sent": 129,
+        "opened": 47,
+        "clicked": 9,
+        "replied": 0,
+        "meeting_booked": 0,
+        "bounced": 1,
+        "unsubscribed": 0
+      },
+      "rates": {
+        "open_rate": 0.3643,
+        "reply_rate": 0.0,
+        "click_rate": 0.0698,
+        "meeting_rate": 0.0,
+        "bounce_rate": 0.0078
+      }
+    }
+  },
+  "comparison": {
+    "open_rate": {
+      "test": {
+        "z_score": 2.1569,
+        "p_value": 0.031,
+        "significant": true,
+        "label": "Significant (p=0.031)",
+        "confidence_level": 95
+      },
+      "ci_a": {
+        "lower": 0.1783,
+        "upper": 0.3211,
+        "point": 0.2426
+      },
+      "ci_b": {
+        "lower": 0.2863,
+        "upper": 0.4502,
+        "point": 0.3643
+      },
+      "diff": 0.1217,
+      "diff_pp": "+12.2pp"
+    },
+    "reply_rate": {
+      "test": {
+        "z_score": 0,
+        "p_value": 1.0,
+        "significant": false,
+        "label": "No variance",
+        "confidence_level": 0
+      },
+      "ci_a": {
+        "lower": 0,
+        "upper": 0.0275,
+        "point": 0.0
+      },
+      "ci_b": {
+        "lower": 0.0,
+        "upper": 0.0289,
+        "point": 0.0
+      },
+      "diff": 0.0,
+      "diff_pp": "+0.0pp"
+    },
+    "click_rate": {
+      "test": {
+        "z_score": 1.5203,
+        "p_value": 0.1284,
+        "significant": false,
+        "label": "Not significant (p=0.128)",
+        "confidence_level": 0
+      },
+      "ci_a": {
+        "lower": 0.0115,
+        "upper": 0.0732,
+        "point": 0.0294
+      },
+      "ci_b": {
+        "lower": 0.0371,
+        "upper": 0.1273,
+        "point": 0.0698
+      },
+      "diff": 0.0404,
+      "diff_pp": "+4.0pp"
+    },
+    "meeting_rate": {
+      "test": {
+        "z_score": 0,
+        "p_value": 1.0,
+        "significant": false,
+        "label": "No variance",
+        "confidence_level": 0
+      },
+      "ci_a": {
+        "lower": 0,
+        "upper": 0.0275,
+        "point": 0.0
+      },
+      "ci_b": {
+        "lower": 0.0,
+        "upper": 0.0289,
+        "point": 0.0
+      },
+      "diff": 0.0,
+      "diff_pp": "+0.0pp"
+    }
+  },
+  "winner": "B",
+  "winner_metric": "open_rate",
+  "sample_adequate": true,
+  "total_sent": 265
+}

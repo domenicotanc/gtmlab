@@ -16,8 +16,11 @@ Usage:
   # Parse generic results CSV with auto-detect
   python3 scripts/csv_parse.py results data/sample/sample-results.csv
 
-  # Just show detected mapping without parsing
+  # Detect: try all schemas and show best match
   python3 scripts/csv_parse.py detect data/some-file.csv
+
+  # Detect: try a specific schema
+  python3 scripts/csv_parse.py detect data/some-file.csv salesloft
 """
 
 import csv
@@ -226,9 +229,21 @@ RESULTS_NUMERIC = {"sent", "opened", "clicked", "replied", "meeting_booked",
 # CLI interface
 # ---------------------------------------------------------------------------
 
+ALL_SCHEMAS = {
+    "prospects": PROSPECT_ALIASES,
+    "results": RESULTS_ALIASES,
+    "salesloft": SALESLOFT_ALIASES,
+}
+
+
 def main():
     if len(sys.argv) < 3:
-        print("Usage: csv_parse.py <prospects|results|detect> <filepath>", file=sys.stderr)
+        print("Usage: csv_parse.py <prospects|results|salesloft|detect> <filepath> [schema]", file=sys.stderr)
+        print("  prospects  — parse prospect CSV with auto-detect column mapping", file=sys.stderr)
+        print("  results    — parse generic results CSV (variant, sent, opened, etc.)", file=sys.stderr)
+        print("  salesloft  — parse Salesloft cadence step export", file=sys.stderr)
+        print("  detect     — show detected mapping without parsing (tries all schemas,", file=sys.stderr)
+        print("               or specify: detect <file> prospects|results|salesloft)", file=sys.stderr)
         sys.exit(1)
 
     mode = sys.argv[1]
@@ -236,7 +251,41 @@ def main():
 
     headers, rows = parse_csv(filepath)
 
-    # Select alias set and numeric fields based on mode
+    # Detect mode: try all schemas or a specific one
+    if mode == "detect":
+        schema_arg = sys.argv[3] if len(sys.argv) > 3 else None
+
+        if schema_arg and schema_arg in ALL_SCHEMAS:
+            # Single schema detect
+            aliases = ALL_SCHEMAS[schema_arg]
+            mapping = auto_detect_mapping(headers, aliases)
+            print(json.dumps({
+                "schema": schema_arg,
+                "headers": headers,
+                "mapping": mapping,
+                "unmapped_headers": [h for h in headers if h not in mapping.values()],
+                "unmapped_fields": [f for f in aliases if f not in mapping],
+            }, indent=2))
+        else:
+            # Try all schemas, report best match
+            results = {}
+            for name, aliases in ALL_SCHEMAS.items():
+                mapping = auto_detect_mapping(headers, aliases)
+                results[name] = {
+                    "mapping": mapping,
+                    "matched": len(mapping),
+                    "unmapped_headers": [h for h in headers if h not in mapping.values()],
+                    "unmapped_fields": [f for f in aliases if f not in mapping],
+                }
+            best = max(results, key=lambda k: results[k]["matched"])
+            print(json.dumps({
+                "headers": headers,
+                "best_match": best,
+                "schemas": results,
+            }, indent=2))
+        return
+
+    # Parse mode
     if mode == "salesloft":
         aliases = SALESLOFT_ALIASES
         numeric = SALESLOFT_NUMERIC
@@ -248,16 +297,6 @@ def main():
         numeric = set()
 
     mapping = auto_detect_mapping(headers, aliases)
-
-    if mode == "detect":
-        print(json.dumps({
-            "headers": headers,
-            "mapping": mapping,
-            "unmapped_headers": [h for h in headers if h not in mapping.values()],
-            "unmapped_fields": [f for f in aliases if f not in mapping],
-        }, indent=2))
-        return
-
     normalized = apply_mapping(rows, mapping, numeric)
 
     print(json.dumps({

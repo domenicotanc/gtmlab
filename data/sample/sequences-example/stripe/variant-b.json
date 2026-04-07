@@ -1,0 +1,16 @@
+{
+  "variant": "B",
+  "angle": "value-focused",
+  "prospect": {
+    "company_name": "Stripe",
+    "contact_name": "Sarah Chen",
+    "contact_email": "sarah@stripe.com"
+  },
+  "emails": [
+    {"number": 1, "type": "opener", "subject": "Industry shift", "body": "Hi Sarah, three trends reshaping fintech identity: embedded verification, real-time risk scoring, and AI-driven document checks. Stripe's positioned well for all three."},
+    {"number": 2, "type": "value", "subject": "3 patterns in payments", "body": "Sarah, the fastest-growing payment platforms share one thing: they treat identity verification as a conversion lever, not a compliance checkbox. Here's what that looks like in practice."},
+    {"number": 3, "type": "social-proof", "subject": "What top fintechs do differently", "body": "The payment companies growing fastest right now all automated identity checks at the onboarding step. One saw merchant activation improve 23% — just by removing manual review friction."},
+    {"number": 4, "type": "followup", "subject": "Useful framework", "body": "Sarah, wrote up a framework for evaluating identity verification approaches in payments. Covers build vs buy tradeoffs specific to fintech. Want me to send it over?"},
+    {"number": 5, "type": "breakup", "subject": "Closing thought", "body": "Sarah, no worries if the timing isn't right. If identity verification strategy comes up in a future planning cycle, I'd enjoy the conversation. All the best with Stripe's growth."}
+  ]
+}

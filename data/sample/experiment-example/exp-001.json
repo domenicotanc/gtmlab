@@ -1,0 +1,14 @@
+{
+  "id": "exp-001",
+  "name": "Q2-pain-vs-value",
+  "angle_a": "pain-focused",
+  "angle_b": "value-focused",
+  "status": "completed",
+  "assignments": {
+    "stripe": "A",
+    "notion": "B"
+  },
+  "prospects": ["stripe", "notion"],
+  "created_at": "2026-04-07T10:00:00Z",
+  "completed_at": "2026-04-14T10:00:00Z"
+}

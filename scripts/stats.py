@@ -336,7 +336,11 @@ def normal_ppf(p: float) -> float:
 def main():
     if len(sys.argv) < 2:
         print("Usage: stats.py <command> [args]", file=sys.stderr)
-        print("Commands: compare, analyze, sample-size", file=sys.stderr)
+        print("Commands:", file=sys.stderr)
+        print("  compare          — z-test two proportions (JSON arg)", file=sys.stderr)
+        print("  analyze          — analyze experiment results file (JSON with variant field)", file=sys.stderr)
+        print("  analyze-salesloft — compare two Salesloft cadence exports (A file B file)", file=sys.stderr)
+        print("  sample-size      — minimum sample size calculation (JSON arg)", file=sys.stderr)
         sys.exit(1)
 
     command = sys.argv[1]

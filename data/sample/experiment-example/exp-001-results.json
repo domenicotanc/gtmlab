@@ -1,0 +1,20 @@
+{
+  "variant_a": {
+    "label": "A",
+    "rows": [
+      {"step_name": "Email 1", "day": 1, "sent": 35, "opened": 14, "clicked": 2, "bounced": 1},
+      {"step_name": "Email 2", "day": 4, "sent": 34, "opened": 9, "clicked": 2, "bounced": 0},
+      {"step_name": "Email 3", "day": 9, "sent": 34, "opened": 6, "clicked": 0, "bounced": 0},
+      {"step_name": "Email 4", "day": 17, "sent": 33, "opened": 4, "clicked": 0, "bounced": 0}
+    ]
+  },
+  "variant_b": {
+    "label": "B",
+    "rows": [
+      {"step_name": "Email 1", "day": 1, "sent": 34, "opened": 18, "clicked": 3, "bounced": 0},
+      {"step_name": "Email 2", "day": 4, "sent": 33, "opened": 12, "clicked": 4, "bounced": 1},
+      {"step_name": "Email 3", "day": 9, "sent": 32, "opened": 10, "clicked": 1, "bounced": 0},
+      {"step_name": "Email 4", "day": 17, "sent": 30, "opened": 7, "clicked": 1, "bounced": 0}
+    ]
+  }
+}
