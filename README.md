@@ -96,4 +96,4 @@ Every question is grounded in actual research about the specific prospect. Gener
 
 ## Built With
 
-Claude Code, Python 3, and the SPICED sales methodology by Winning by Design.
+Claude Code, Python 3, and the SPICED sales methodology
